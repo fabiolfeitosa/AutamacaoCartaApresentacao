@@ -1,28 +1,9 @@
-'''Automação de Carta Apresentação para vagas similares,
-em que a mesma carta possa ser usada diversas vezes,
-salvando arquivo em docx com nome da empresa e o cargo'''
+Esse script tem como objetivo auxiliar pessoas em busca de realocação no mercado. 
+No momento de enviar uma carta apresentação para vagas semelhantes, enviar carta personalizada com nome da empresa e o nome do cargo.
+Salvando arquivo em docx com nome da empresa e o cargo.
 
-from docx import Document
-empresa = input('Qual nome da empresa?')
-vaga = input('Qual nome da vaga?')
 
-# Conteúdo da carta, segue exemplo inicial
+This script targets people who are searching for relocation opportunities. 
+When sending a cover letter for similar jobs, it sends a personalized letter with the company name and job title. 
+The file is saved as a DOCX file with the company name and job title in the filename.
 
-carta = (
-    f"Estou escrevendo para expressar meu interesse na posição de {vaga}. Com uma sólida "
-    f"formação acadêmica em #####, complementada por um MBA em ##### "
-    f"pela renomada #####, e uma trajetória profissional marcada por experiências "
-    f"significativas em ####, acredito que minhas habilidades "
-    f"e competências estão alinhadas com as responsabilidades e requisitos da vaga na {empresa}."
-)
-# Criar documento
-document = Document()
-document.add_paragraph(carta)
-
-# Nome do arquivo
-nome_arquivo = f"{empresa}_{vaga}.docx"
-
-# Salvar documento
-document.save(nome_arquivo)
-
-print(f"Documento salvo como {nome_arquivo}")
